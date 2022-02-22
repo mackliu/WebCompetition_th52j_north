@@ -1,0 +1,221 @@
+/* 整體設定 */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial;
+}
+.container{
+    width:75%;
+    display:flex;
+    margin:auto;
+}
+main{
+    align-items:center;
+    height:calc(100vh - 130px);
+}
+footer{
+    background:lightskyblue;
+    color:darkblue;
+    padding:1em;
+    width:100%;
+    line-height:1em;
+    text-align:center;
+    position:fixed;
+    bottom:0;
+}
+
+/*頁首導覽列*/
+header{
+    padding:1em;
+    background-color:lightskyblue;
+    box-shadow: 0 0 5px #999;
+}
+nav.container{
+    justify-content: space-between;
+}
+nav a{
+    font-size:1.2em;
+    margin:0 0.25em;
+    text-decoration:none;
+    text-align:center;
+    padding:0.25em 1em;
+}
+nav a:hover,
+.active{
+    text-decoration:underline;
+    background:#EEE;
+    border-radius:15px;
+    box-shadow: 0px 2px 5px #999;
+}
+
+/*首頁設定*/
+#home main{
+    justify-content: space-between;
+}
+#home .card{
+    width:30%;
+}
+#home .card h3{
+    margin:0.75em 0;
+}
+#home img{
+    width:100%;
+    border-radius:1.5em;
+}
+
+/*遊戲頁設定*/
+#games main{
+    justify-content: center;
+}
+#games .map,
+#games .msg{
+    height:60vh;
+    width:60vh;
+    border:1px solid #EEE;
+    padding:0.5em;
+    position:relative;
+    margin:0.5%;
+}
+#games .map img{
+    width:100%;
+    height:100%;
+}
+#games .star{
+    font-size:2em;
+    position:absolute;
+    z-index:10;
+    text-decoration: none;
+}
+#games .star:hover{
+    color:red;
+}
+#games .item{
+    width:100%;
+    height:100%;
+    position:relative;
+    display:none;
+}
+#games .show{
+    display:block;
+}
+#games img{
+    width:100%;
+    height:100%;
+}
+#games .info{
+    width:100%;
+    height:25%;
+    position:absolute;
+    bottom:0px;
+    background:rgba(200,200,200,0.7);
+    padding:1em;
+    line-height:1.4em;
+}
+
+/*裝置頁設定*/
+#devices main{
+    flex-flow: column;
+    justify-content: center;
+    position:relative;
+}
+#devices .box,
+#devices .icons{
+    display: flex;
+}
+#devices .box p{
+    display:none;
+}
+#devices .box .card img{
+    width:100%;
+    border-radius:1.5em;
+}
+#devices .box .card{
+    flex:1;
+    margin:0.5em;
+    cursor: pointer;
+}
+#devices .icons{
+    position:absolute;
+    bottom:0;
+}
+#devices .icons .icon{
+    margin:0.25em;
+}
+#devices #lightbox{
+    width:100vw;
+    height:100vh;
+    position:absolute;
+    top:0;
+    left:0;
+    background-color: rgba(150,150,150,0.8);
+    overflow: hidden;
+    display:none;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+#lightbox div{
+    position:relative;
+    width:40%;
+}
+#lightbox img{
+    width: 100%;
+}
+#lightbox p{
+    position:absolute;
+    padding:1em;
+    font-size:1.5em;
+    bottom:0;
+}
+
+/*登入頁設定*/
+#login main{
+    justify-content: center;
+}
+#login .login-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 2em;
+    overflow: hidden;
+    box-shadow: 0 0 15px #ccc;
+    width:50%
+}
+#login .photo{
+    width:30%;
+    height:40vh;
+}
+#login .photo img{
+    width:100%;
+    height:100%;
+}
+#login .form{
+    width:70%;
+    padding:2em;
+}
+#login label{
+    display:block;
+    margin:1em;
+}
+#login label div,
+#login label input,
+#login label .ver-box{
+    padding:0.2em 0.5em;
+}
+#login label input{
+    width:100%;
+    font-size:1.2em;
+    border-radius:0.5em;
+}
+#login .ver-box{
+    background:#555;
+    color:white;
+}
+#login p input{
+    display:block;
+    padding:0.3em 1em;
+    width:90%;
+    margin:auto;
+    border-radius:0.5em;
+}

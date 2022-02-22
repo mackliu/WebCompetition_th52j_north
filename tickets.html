@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN | Taiwan Mobile game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.6.0.min.js"></script>
+</head>
+
+<body id="login">
+    <!--網站上方頁首部份-->
+    <header>
+        <!--導覽列容器-->
+        <nav class="container">
+            <!--把標籤放在導覽列的左側，可以使用<img>連結圖片來代替-->
+            <h1>LOGO</h1>
+
+            <!--建立一個標籤容器來放置選項，會在導覽列的右側-->
+            <div>
+                <!--建立四個頁面的連結及文字內容，加上樣式 active 來對當前頁做強調-->
+                <a href="home.html">Home</a>
+                <a href="news.html">News</a>
+                <a href="discover.html">Discover</a>
+                <a href="tickets.html" class='active'>Tickets</a>
+            </div>
+        </nav>
+    </header>
+    <!--網站中間主內容部份-->
+    <main class="container">
+        <div class="login-box">
+            <div class="photo">
+                <img src="img/photo.png" alt="">
+            </div>
+            <form action="login.php" class="form">
+                <label>
+                    <div>Account</div>
+                    <input type="text" name="acc" id="acc">
+                </label>
+                <label>
+                    <div>Password</div>
+                    <input type="password" name="pw" id="pw">
+                </label>
+                <label>
+                    <div>Verification <span class='ver-box'>123131</span></div> 
+                    <input type="text" name="ver" id="ver">
+                </label>
+                <p class="ct">
+                    <input type="submit" value="Submit">
+                </p>
+            </form>
+        </div>
+    </main>
+    <!--網站下方頁腳部份-->
+    <footer>Copyright 2022 Floriade All Rights Reserved</footer>
+</body>
+
+</html>

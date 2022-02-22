@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAMES | Taiwan Mobile game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.6.0.min.js"></script>
+</head>
+
+<body id="games">
+    <!--網站上方頁首部份-->
+    <header>
+        <!--導覽列容器-->
+        <nav class="container">
+            <!--把標籤放在導覽列的左側，可以使用<img>連結圖片來代替-->
+            <h1>LOGO</h1>
+
+            <!--建立一個標籤容器來放置選項，會在導覽列的右側-->
+            <div>
+                <!--建立四個頁面的連結及文字內容，加上樣式 active 來對當前頁做強調-->
+                <a href="home.html">Home</a>
+                <a href="news.html" class='active'>News</a>
+                <a href="discover.html">Discover</a>
+                <a href="tickets.html">Tickets</a>
+            </div>
+        </nav>
+    </header>
+    <!--網站中間主內容部份-->
+    <main class='container'>
+
+        <!--建立左側地圖區的容器-->
+        <div class="map">
+
+            <!--使用樣式star來規範每個連結的外觀，並直接以行內樣式來做絕對定位-->
+            <a class='star' href='#info1' style="top:120px;left:480px">&#9733;</a>
+            <a class='star' href='#info2' style="top:110px;left:250px">&#9733;</a>
+            <a class='star' href='#info3' style="top:310px;left:160px">&#9733;</a>
+            <a class='star' href='#info4' style="top:340px;left:250px">&#9733;</a>
+            <a class='star' href='#info5' style="top:420px;left:290px">&#9733;</a>
+
+            <!--放置地圖，並以絕對定位的方式當成背景-->
+            <img src="img/worldmap.jpg" alt="">
+        </div>
+
+        <!--建立右側訊息區-->
+        <div class="msg">
+
+            <!--使用樣式item來建立每個訊息區塊的外觀，並以id來對每個區塊命名-->
+            <div class="item" id="info1">
+                <img src="img/game1.png" alt="">
+                <div class="info">game1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere velit magnam pariatur nam voluptate officiis sit, veniam cumque rem sapiente odit voluptatum doloribus tenetur quo numquam. Animi, obcaecati. Consequuntur, velit?</div>
+            </div>
+            <div class="item" id="info2">
+                <img src="img/game2.png" alt="">
+                <div class="info">game2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere velit magnam pariatur nam voluptate officiis sit, veniam cumque rem sapiente odit voluptatum doloribus tenetur quo numquam. Animi, obcaecati. Consequuntur, velit?</div>
+            </div>
+            <div class="item" id="info3">
+                <img src="img/game3.png" alt="">
+                <div class="info">game3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere velit magnam pariatur nam voluptate officiis sit, veniam cumque rem sapiente odit voluptatum doloribus tenetur quo numquam. Animi, obcaecati. Consequuntur, velit?</div>
+            </div>
+            <div class="item" id="info4">
+                <img src="img/game4.png" alt="">
+                <div class="info">game4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere velit magnam pariatur nam voluptate officiis sit, veniam cumque rem sapiente odit voluptatum doloribus tenetur quo numquam. Animi, obcaecati. Consequuntur, velit?</div>
+            </div>
+            <div class="item" id="info5">
+                <img src="img/game5.png" alt="">
+                <div class="info">game5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere velit magnam pariatur nam voluptate officiis sit, veniam cumque rem sapiente odit voluptatum doloribus tenetur quo numquam. Animi, obcaecati. Consequuntur, velit?</div>
+            </div>
+
+        </div>
+    </main>
+    <!--網站下方頁腳部份-->
+    <footer>Copyright 2022 Floriade All Rights Reserved</footer>
+
+</body>
+
+</html>
+<script>
+//使用jQuery來讓第一個item顯示出來
+$(".item").eq(0).show();
+
+//對每個樣式為star的建立點擊事件
+$(".star").on("click",function(){
+
+    //取得點擊當下的start元件中，屬性為href的內容做為變數id的值
+    let id=$(this).attr("href");
+
+    //先讓所有的樣式item的元訊息區塊設為隱藏
+    $(".item").hide();
+
+    //讓指定id的訊息區塊顯示出來
+    $(id).show();
+})
+</script>

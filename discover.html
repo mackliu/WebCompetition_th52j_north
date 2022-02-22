@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEVICES | Taiwan Mobile game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.6.0.min.js"></script>
+</head>
+
+<body id="devices">
+    <!--網站上方頁首部份-->
+    <header>
+        <!--導覽列容器-->
+        <nav class="container">
+            <!--把標籤放在導覽列的左側，可以使用<img>連結圖片來代替-->
+            <h1>LOGO</h1>
+
+            <!--建立一個標籤容器來放置選項，會在導覽列的右側-->
+            <div>
+                <!--建立四個頁面的連結及文字內容，加上樣式 active 來對當前頁做強調-->
+                <a href="home.html">Home</a>
+                <a href="news.html">News</a>
+                <a href="discover.html" class='active'>Discover</a>
+                <a href="tickets.html">Tickets</a>
+            </div>
+        </nav>
+    </header>
+    <!--網站中間主內容部份-->
+    <main class="container">
+        <!--使用樣式 box 來規範所有遊戲的icon的外觀-->
+        <div class='box'>
+
+            <!--使用樣式 card 來建立每一個遊戲的外觀規範，包含了圖片及文字描述-->
+            <div class="card">
+                <img src="img/game1.png">
+                <p>game1 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias facere id placeat. Tenetur asperiores saepe, sint quam magni voluptate, culpa nam illo placeat odit natus deserunt ad tempora excepturi in.</p>
+            </div>
+            <div class="card">
+                <img src="img/game2.png">
+                <p>game2 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis accusamus ut, vero facilis atque accusantium incidunt hic ad, libero omnis nulla maiores minima, itaque officia. Pariatur tempora ipsa necessitatibus totam?</p>
+            </div>
+            <div class="card">
+                <img src="img/game3.png">
+                <p>game3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod odit pariatur voluptatum, commodi sequi magni cumque, iste omnis dolorum perspiciatis amet magnam voluptatibus fugiat rem quia quis unde, itaque ea.</p>
+            </div>
+            <div class="card">
+                <img src="img/game4.png">
+                <p>game4 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium qui iure, exercitationem cumque eaque facere rem officiis veritatis illo beatae perspiciatis unde fugiat ipsum vitae ex placeat consectetur voluptas voluptatum.</p>
+            </div>
+            <div class="card">
+                <img src="img/game5.png">
+                <p>game5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate aspernatur earum ex quaerat sapiente. Cupiditate architecto magni natus, blanditiis aliquid labore debitis nisi vitae consequuntur odio fuga in eligendi quaerat!</p>
+            </div>
+        </div>
+
+        <!--使用樣式icons來規範中間社群小icon的外觀規範和內部元件的位置及排列-->
+        <div class="icons">
+
+            <!--針對每個小icon 使用樣式icon來規範圖片的大小-->
+            <div class="icon"><img src="img/Facebook.png"></div>
+            <div class="icon"><img src="img/Google.png"></div>
+            <div class="icon"><img src="img/Twitter.png"></div>
+            <div class="icon"><img src="img/YouTube.png"></div>
+        </div>
+    </main>
+    <!--網站下方頁腳部份-->
+    <footer>Copyright 2022 Floriade All Rights Reserved</footer>
+
+    <!--燈箱區塊，預設是不顯示，當點擊事件發生時，才會讓燈箱顯示-->
+    <div id="lightbox">
+        <div>
+            <img src="img/game1.png">
+            <p>game1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse consequatur assumenda, nemo numquam quis omnis delectus quod? Aspernatur, cum eaque. Vel tempore a in minima pariatur perspiciatis ab dolorum molestias?</p>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+
+    //對每個card樣式建立點擊事件
+    $(".card").on("click",function(){
+
+        //當點擊發生時取得點擊的card中的圖片路徑
+        let img=$(this).find("img").attr("src")
+
+        //當點擊發生時取得點擊的card中的文字內容
+        let p=$(this).find("p").text()
+
+        //在lightbox區塊中找到<img>這個元件，並把圖片連結取代成img
+        $("#lightbox").find("img").attr("src",img)
+
+        //在lightbox區塊中找到<p>這個元件，並把文字內容取代成p
+        $("#lightbox").find("p").text(p)
+
+        //把lightbox的樣式屬性中的display設為flex，讓燈箱由原本的隱藏，改為顯示
+        $("#lightbox").css("display","flex");
+    })
+
+    //對lightbox燈箱本身建立點擊事件，當燈箱被點擊時，隱藏整個燈箱
+    $("#lightbox").on("click",function(){
+        $(this).hide()
+    })
+
+</script>

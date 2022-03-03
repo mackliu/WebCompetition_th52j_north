@@ -5,13 +5,14 @@
     box-sizing:border-box;
     font-family: Arial;
 }
+.d-flex{
+    display: flex;;
+}
 .container{
     width:75%;
-    display:flex;
     margin:auto;
 }
 main{
-    align-items:center;
     height:calc(100vh - 130px);
 }
 footer{
@@ -42,7 +43,7 @@ nav a{
     padding:0.25em 1em;
 }
 nav a:hover,
-.active{
+nav .active{
     text-decoration:underline;
     background:#EEE;
     border-radius:15px;
@@ -51,59 +52,113 @@ nav a:hover,
 
 /*首頁設定*/
 #home main{
-    justify-content: space-between;
+ padding:5rem;
+ text-align: center;
 }
 #home .card{
-    width:30%;
+    width:100%;
+    flex-shrink: 0;
+    position:relative;
 }
 #home .card h3{
     margin:0.75em 0;
+    position:absolute;
+    bottom:5rem;
+}
+#home .card div{
+    position:absolute;
+    bottom:3rem;
+    overflow: hidden;
+    text-align: left;;
 }
 #home img{
     width:100%;
+    height:100%;
     border-radius:1.5em;
 }
-
-/*遊戲頁設定*/
-#games main{
+#home #slide{
+    display:flex;
+    width:80%;
+    height:40vh;
+    overflow:hidden;
+    margin:auto;
+    position:relative;
+}
+#home .btns{
+    width:80%;
+    margin:auto;
+    text-align: center;
     justify-content: center;
+    align-items: center;
 }
-#games .map,
-#games .msg{
-    height:60vh;
-    width:60vh;
-    border:1px solid #EEE;
-    padding:0.5em;
-    position:relative;
-    margin:0.5%;
+#home .btn{
+    border:1px solid #999;
+    border-radius: 50%;
+    width:20px;
+    height:20px;
+    margin:1rem;
+    background:white;
 }
-#games .map img{
+#home .btns .active{
+    background:gray;
+}
+#home .event{
+    width:80%;
+    padding:2rem;
+    box-shadow: 0 0 10px #ccc;
+    margin:2rem auto;
+}
+
+#home .event div{
+    text-align: left;
+    margin:1rem 0;
+}
+/*新聞頁設定*/
+#news #list{
+    width:75%;
+    margin:1rem auto;
+    height:70vh;
+    overflow: auto;
+    padding:1rem;
+}
+
+#news article{
+    width:95%;
+    height:20vh;
+}
+#news article .media{
+ width:15vh;
+ height:15vh;
+ min-width:100px;
+ min-height:100px;
+ display:inline-block;
+ float:left;
+ vertical-align: top;
+ margin:0.5rem;
+}
+#news article img{
     width:100%;
     height:100%;
 }
-#games .star{
-    font-size:2em;
-    position:absolute;
-    z-index:10;
-    text-decoration: none;
+#news article h3{
+    padding:0.5rem;
 }
-#games .star:hover{
-    color:red;
+#news article h3 .btn{
+    padding:0.25rem 1rem;
+    border:1px solid #999;
+    border-radius:1rem;
+    float:right;
+    font-weight:300;
 }
-#games .item{
-    width:100%;
-    height:100%;
-    position:relative;
-    display:none;
+#news article h3 .btn:hover{
+    background-color: lightgreen;
+    cursor: pointer;
 }
-#games .show{
-    display:block;
+#news article section{
+    padding:0.5rem;
 }
-#games img{
-    width:100%;
-    height:100%;
-}
-#games .info{
+
+#news .info{
     width:100%;
     height:25%;
     position:absolute;
@@ -170,52 +225,41 @@ nav a:hover,
 }
 
 /*登入頁設定*/
-#login main{
-    justify-content: center;
-}
+
 #login .login-box{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding:3rem;
     border-radius: 2em;
     overflow: hidden;
     box-shadow: 0 0 15px #ccc;
-    width:50%
+    max-width:60%;
+    min-width:40rem;
+    margin:3rem auto;
 }
-#login .photo{
-    width:30%;
-    height:40vh;
-}
-#login .photo img{
-    width:100%;
-    height:100%;
-}
+
 #login .form{
-    width:70%;
-    padding:2em;
+    width:100%;
+    padding:2rem;
 }
 #login label{
     display:block;
-    margin:1em;
+    margin:1rem;
+    font-size:1.25rem;
 }
-#login label div,
-#login label input,
-#login label .ver-box{
-    padding:0.2em 0.5em;
+#login label div{
+    padding:0.25rem;
 }
 #login label input{
     width:100%;
     font-size:1.2em;
     border-radius:0.5em;
+    padding:0.75rem;
 }
-#login .ver-box{
-    background:#555;
-    color:white;
-}
-#login p input{
+
+#login input[type='submit']{
     display:block;
-    padding:0.3em 1em;
-    width:90%;
-    margin:auto;
+    padding:0.5rem 1rem;
+    width:50%;
+    margin:2rem auto;
+    font-size:1.25rem;
     border-radius:0.5em;
 }

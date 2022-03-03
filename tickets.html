@@ -14,7 +14,7 @@
     <!--網站上方頁首部份-->
     <header>
         <!--導覽列容器-->
-        <nav class="container">
+        <nav class="container d-flex">
             <!--把標籤放在導覽列的左側，可以使用<img>連結圖片來代替-->
             <h1>LOGO</h1>
 
@@ -31,21 +31,23 @@
     <!--網站中間主內容部份-->
     <main class="container">
         <div class="login-box">
-            <div class="photo">
-                <img src="img/photo.png" alt="">
-            </div>
-            <form action="login.php" class="form">
+            <h1>訂票資訊</h1>
+            <form action="tickets.php" class="form">
                 <label>
-                    <div>Account</div>
-                    <input type="text" name="acc" id="acc">
+                    <div>First name</div>
+                    <input type="text" name="first_name" id="first_name">
                 </label>
                 <label>
-                    <div>Password</div>
+                    <div>Last name</div>
+                    <input type="text" name="last_name" id="last_name">
+                </label>
+                <label>
+                    <div>Phone</div>
+                    <input type="text" name="phone" id="phone">
+                </label>
+                <label>
+                    <div>Password </div> 
                     <input type="password" name="pw" id="pw">
-                </label>
-                <label>
-                    <div>Verification <span class='ver-box'>123131</span></div> 
-                    <input type="text" name="ver" id="ver">
                 </label>
                 <p class="ct">
                     <input type="submit" value="Submit">

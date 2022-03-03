@@ -14,7 +14,7 @@
     <!--網站上方頁首部份-->
     <header>
         <!--導覽列容器-->
-        <nav class="container">
+        <nav class="container d-flex">
             <!--把標籤放在導覽列的左側，可以使用<img>連結圖片來代替-->
             <h1>LOGO</h1>
 
@@ -29,24 +29,42 @@
         </nav>
     </header>
     <!--網站中間主內容部份-->
-    <main  class="container">
+    <main>
         <!--使用樣式card 對每一個區塊做外觀的規範-->
-        <div class="card">
-            
-            <!--區塊內建立題目指定的圖片及文字內容-->
-            <img src="img/game.png" alt="">
-            <h3>The first racing game</h3>
-            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo provident iure a iste nobis cupiditate temporibus rerum! Repellat assumenda repellendus aut quod atque nostrum reprehenderit sint architecto praesentium sunt. Sequi!</div>
+        <div id="slide">
+            <div class="card" id="slide0">                
+                <!--區塊內建立題目指定的圖片及文字內容-->
+                <img src="img/game.png" alt="">
+                <h3>The first racing game</h3>
+                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo provident iure a iste nobis cupiditate temporibus rerum! Repellat assumenda repellendus aut quod atque nostrum reprehenderit sint architecto praesentium sunt. Sequi!</div>
+            </div>
+            <div class="card" id="slide1">
+                <img src="img/game.png" alt="">
+                <h3>The second web game</h3>
+                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo provident iure a iste nobis cupiditate temporibus rerum! Repellat assumenda repellendus aut quod atque nostrum reprehenderit sint architecto praesentium sunt. Sequi!</div>
+            </div>
+            <div class="card" id="slide2">
+                <img src="img/game.png" alt="">
+                <h3>The third rpg game</h3>
+                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo provident iure a iste nobis cupiditate temporibus rerum! Repellat assumenda repellendus aut quod atque nostrum reprehenderit sint architecto praesentium sunt. Sequi!</div>
+            </div>
+            <div class="card" id="slide3">
+                <img src="img/game.png" alt="">
+                <h3>The forth rpg game</h3>
+                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo provident iure a iste nobis cupiditate temporibus rerum! Repellat assumenda repellendus aut quod atque nostrum reprehenderit sint architecto praesentium sunt. Sequi!</div>
+            </div>
         </div>
-        <div class="card">
-            <img src="img/game.png" alt="">
-            <h3>The first web game</h3>
-            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo provident iure a iste nobis cupiditate temporibus rerum! Repellat assumenda repellendus aut quod atque nostrum reprehenderit sint architecto praesentium sunt. Sequi!</div>
+        <div class="btns d-flex">
+            <div class="btn active" id="btn0"></div>
+            <div class="btn" id="btn1"></div>
+            <div class="btn" id="btn2"></div>
+            <div class="btn" id="btn3"></div>
         </div>
-        <div class="card">
-            <img src="img/game.png" alt="">
-            <h3>The first rpg game</h3>
-            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo provident iure a iste nobis cupiditate temporibus rerum! Repellat assumenda repellendus aut quod atque nostrum reprehenderit sint architecto praesentium sunt. Sequi!</div>
+        <div class="event">
+            <h3>活動資訊</h3>
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, repellendus sunt eligendi quasi ut, accusamus ab aut error reiciendis neque a, voluptate sequi ea consequatur maiores. Odit quis placeat rem.
+            </div>
         </div>
     </main>
     <!--網站下方頁腳部份-->
@@ -54,3 +72,25 @@
 </body>
 
 </html>
+
+<script>
+let i=0;
+let num=$(".card").length
+let slide=setInterval(function(){
+    let w=$(".card").outerWidth();
+    $(".btn").removeClass("active")
+    $("#btn"+i).addClass("active")
+    $(".card").animate({right:i*w})
+    if(i<num-1){
+        i=i+1;
+    }else{
+        i=0;
+    }
+},3000)
+
+$(".btn").on("click",function(){
+    let id=$(this).attr("id").replace("btn","")
+    console.log(id)
+    i=parseInt(id)
+})
+</script>

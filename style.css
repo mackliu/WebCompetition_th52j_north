@@ -5,6 +5,11 @@
     box-sizing:border-box;
     font-family: Arial;
 }
+body{
+    width:1920px;
+    height:1080px;
+    margin:auto;
+}
 .d-flex{
     display: flex;;
 }

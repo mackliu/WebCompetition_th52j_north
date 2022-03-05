@@ -72,27 +72,6 @@ nav .active{
  padding:5rem;
  text-align: center;
 }
-#home .card{
-    width:100%;
-    flex-shrink: 0;
-    position:relative;
-}
-#home .card h3{
-    margin:0.75em 0;
-    position:absolute;
-    bottom:5rem;
-}
-#home .card div{
-    position:absolute;
-    bottom:3rem;
-    overflow: hidden;
-    text-align: left;;
-}
-#home img{
-    width:100%;
-    height:100%;
-    border-radius:1.5em;
-}
 #home #slide{
     display:flex;
     width:80%;
@@ -101,6 +80,32 @@ nav .active{
     margin:auto;
     position:relative;
 }
+#home .card{
+    width:100%;
+    flex-shrink: 0;
+    position:absolute;
+}
+#home .card h3{
+    margin:0.75em 0;
+    font-size:2rem;
+    position:absolute;
+    bottom:5rem;
+    padding:1rem;
+}
+#home .card div{
+    position:absolute;
+    bottom:3rem;
+    font-size:1rem;
+    overflow: hidden;
+    text-align: left;;
+    padding:1rem;
+}
+#home .card img{
+    width:100%;
+    height:360px;
+    border-radius:1.5em;
+}
+
 #home .btns{
     width:80%;
     margin:auto;
@@ -110,14 +115,16 @@ nav .active{
 }
 #home .btn{
     border:1px solid #999;
-    border-radius: 50%;
-    width:20px;
-    height:20px;
+    border-radius: 10px;
+    width:60px;
+    height:2rem;
     margin:1rem;
+    line-height:2rem;
     background:white;
+    cursor: pointer;
 }
-#home .btns .active{
-    background:gray;
+#home .btn:hover{
+    background:#eee;
 }
 #home .event{
     width:80%;

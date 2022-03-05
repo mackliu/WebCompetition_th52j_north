@@ -29,42 +29,58 @@
     </header>
     <!--網站中間主內容部份-->
     <main>
+
+        <style>
+            .card {
+                font-size: 3rem;
+                display: none;
+            }
+        </style>
         <!--使用樣式card 對每一個區塊做外觀的規範-->
         <div id="slide">
-            <div class="card" id="slide0">                
-                <!--區塊內建立題目指定的圖片及文字內容-->
+            <div class="card">
                 <img src="img/game.png" alt="">
-                <h3>The first racing game</h3>
+                <h3>The S1 racing game</h3>
                 <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo provident iure a iste nobis cupiditate temporibus rerum! Repellat assumenda repellendus aut quod atque nostrum reprehenderit sint architecto praesentium sunt. Sequi!</div>
+            
             </div>
-            <div class="card" id="slide1">
+            <div class="card">
                 <img src="img/game.png" alt="">
-                <h3>The second web game</h3>
+                <h3>The S2 racing game</h3>
                 <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo provident iure a iste nobis cupiditate temporibus rerum! Repellat assumenda repellendus aut quod atque nostrum reprehenderit sint architecto praesentium sunt. Sequi!</div>
+            
             </div>
-            <div class="card" id="slide2">
+            <div class="card">
                 <img src="img/game.png" alt="">
-                <h3>The third rpg game</h3>
+                <h3>The S3 racing game</h3>
                 <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo provident iure a iste nobis cupiditate temporibus rerum! Repellat assumenda repellendus aut quod atque nostrum reprehenderit sint architecto praesentium sunt. Sequi!</div>
+            
             </div>
-            <div class="card" id="slide3">
+            <div class="card">
                 <img src="img/game.png" alt="">
-                <h3>The forth rpg game</h3>
+                <h3>The S4 racing game</h3>
                 <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo provident iure a iste nobis cupiditate temporibus rerum! Repellat assumenda repellendus aut quod atque nostrum reprehenderit sint architecto praesentium sunt. Sequi!</div>
+            
+            </div>
+            <div class="card">
+                <img src="img/game.png" alt="">
+                <h3>The S5 racing game</h3>
+                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo provident iure a iste nobis cupiditate temporibus rerum! Repellat assumenda repellendus aut quod atque nostrum reprehenderit sint architecto praesentium sunt. Sequi!</div>
+            
             </div>
         </div>
         <div class="btns d-flex">
-            <div class="btn active" id="btn0"></div>
-            <div class="btn" id="btn1"></div>
-            <div class="btn" id="btn2"></div>
-            <div class="btn" id="btn3"></div>
-        </div>
-        <div class="event">
-            <h3>活動資訊</h3>
-            <div>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, repellendus sunt eligendi quasi ut, accusamus ab aut error reiciendis neque a, voluptate sequi ea consequatur maiores. Odit quis placeat rem.
+            <div class="btn" id="goleft"> <= </div>
+                    <div class="btn" id="goright"> => </div>
             </div>
-        </div>
+            <div class="event">
+                <h3>活動資訊</h3>
+                <div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, repellendus sunt eligendi quasi ut,
+                    accusamus ab aut error reiciendis neque a, voluptate sequi ea consequatur maiores. Odit quis placeat
+                    rem.
+                </div>
+            </div>
     </main>
     <!--使用樣式icons來規範中間社群小icon的外觀規範和內部元件的位置及排列-->
     <div class="icons">
@@ -81,23 +97,58 @@
 </html>
 
 <script>
-let i=0;
-let num=$(".card").length
-let slide=setInterval(function(){
-    let w=$(".card").outerWidth();
-    $(".btn").removeClass("active")
-    $("#btn"+i).addClass("active")
-    $(".card").animate({right:i*w})
-    if(i<num-1){
-        i=i+1;
-    }else{
-        i=0;
-    }
-},3000)
+    let i = 0;
+    let num = $(".card").length
 
-$(".btn").on("click",function(){
-    let id=$(this).attr("id").replace("btn","")
-    console.log(id)
-    i=parseInt(id)
-})
+    $(".card").eq(0).show()
+    let w = $(".card").outerWidth();
+
+    let slide = setInterval(function () {
+        slider('left')
+    }, 2000)
+
+    function slider(director) {
+        let now = $(".card:visible").index();
+        let next;
+        if (director == 'left') {
+            next = (now + 1 < num) ? now + 1 : 0;
+            $(".card").eq(next).css({ left: w });
+            $(".card").eq(next).show();
+
+            $(".card").eq(now).animate({ right: w }, function () {
+                $(".card").eq(now).hide()
+                $(".card").eq(now).css({ right: '', left: '' })
+            })
+        } else {
+            next = (now - 1 >= 0) ? now - 1 : num - 1;
+            $(".card").eq(next).css({ right: w });
+            $(".card").eq(next).show();
+
+            $(".card").eq(now).animate({ left: w }, function () {
+                $(".card").eq(now).hide()
+                $(".card").eq(now).css({ left: '', right: '' })
+            })
+        }
+
+        $(".card").eq(next).animate({ left: 0 }, () => {
+            $(".card").eq(next).css({ left: '', right: '' })
+        })
+    }
+
+    $(".btn").on("click", function () {
+        let id = $(this).attr("id").replace("go","");
+        slider(id)
+    })
+
+    $(".btn").hover(
+        function () {
+            clearInterval(slide)
+        },
+        function () {
+            slide = setInterval(function () {
+                slider('left')
+            }, 2000)
+        }
+    )
+
 </script>

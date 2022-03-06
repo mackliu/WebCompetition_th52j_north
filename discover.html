@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TICKETS | Taiwan Mobile game</title>
+    <title>DISCOVER | Floriade Expo 2022</title>
     <link rel="stylesheet" href="style.css">
     <script src="jquery-3.6.0.min.js"></script>
 </head>
 
-<body id="tickets">
+<body id="discover">
     <!--網站上方頁首部份-->
     <header class="d-center">
         <!--導覽列容器-->
@@ -23,37 +23,33 @@
                 <!--建立四個頁面的連結及文字內容，加上樣式 active 來對當前頁做強調-->
                 <a href="home.html">Home</a>
                 <a href="news.html">News</a>
-                <a href="discover.html">Discover</a>
-                <a href="tickets.html" class='active'>Tickets</a>
+                <a href="discover.html" class='active'>Discover</a>
+                <a href="tickets.html">Tickets</a>
             </div>
         </nav>
     </header>
     <!--網站中間主內容部份-->
-    <main class="container">
-        <div class="tickets-box">
-            <h1>訂票資訊</h1>
-            <form action="tickets.php" class="form" method="post">
-                <label>
-                    <div>First name</div>
-                    <input type="text" name="first_name" id="first_name">
-                </label>
-                <label>
-                    <div>Last name</div>
-                    <input type="text" name="last_name" id="last_name">
-                </label>
-                <label>
-                    <div>Phone</div>
-                    <input type="text" name="phone" id="phone">
-                </label>
-                <label>
-                    <div>Password </div>
-                    <input type="password" name="pw" id="pw">
-                </label>
-                <p class="ct">
-                    <input type="submit" value="Submit">
-                </p>
-            </form>
+    <main class="container d-center">
+        <!--使用樣式 box 來規範所有遊戲的icon的外觀-->
+        <div class='info-block'>
+            <div class="media">
+                <img src="img/game1.png">
+            </div>
+            <div class="title">世園會資訊</div>
+            <section>game1 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias facere id placeat.
+                Tenetur asperiores saepe, sint quam magni voluptate, culpa nam illo placeat odit natus deserunt ad
+                tempora excepturi in.</section>
         </div>
+        <div class='info-block'>
+            <div class="media">
+                <img src="img/game2.png">
+            </div>
+            <div class="title">纜車介紹</div>
+            <section>game1 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias facere id placeat.
+                Tenetur asperiores saepe, sint quam magni voluptate, culpa nam illo placeat odit natus deserunt ad
+                tempora excepturi in.</section>
+        </div>
+
     </main>
     <!--使用樣式social-icons來規範中間社群圖示的外觀規範和內部元件的位置及排列-->
     <div class="social-icons">

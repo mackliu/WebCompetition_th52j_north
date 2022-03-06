@@ -1,256 +1,280 @@
 /* 整體設定 */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: Arial;
 }
-body{
-    width:1920px;
-    height:1080px;
-    margin:auto;
-}
-.d-flex{
-    display: flex;;
-}
-.container{
-    width:75%;
-    margin:auto;
-}
-main{
-    height:calc(100vh - 130px);
-}
-footer{
-    background:lightskyblue;
-    color:darkblue;
-    padding:1em;
-    width:1920px;
-    line-height:1em;
-    text-align:center;
-    position:fixed;
-    bottom:0;
+
+body {
+    width: 1920px;
+    height: 1080px;
+    margin: auto;
 }
 
-/*頁首導覽列*/
-header{
-    padding:1em;
-    background-color:lightskyblue;
+header {
+    background-color: lightskyblue;
     box-shadow: 0 0 5px #999;
-}
-nav.container{
-    justify-content: space-between;
-}
-nav a{
-    font-size:1.2em;
-    margin:0 0.25em;
-    text-decoration:none;
-    text-align:center;
-    padding:0.25em 1em;
-}
-nav a:hover,
-nav .active{
-    text-decoration:underline;
-    background:#EEE;
-    border-radius:15px;
-    box-shadow: 0px 2px 5px #999;
+    height: 4rem;
 }
 
-.icons{
-    display:flex;
-    width:50%;
-    justify-content: center;
-    position:absolute;
-    left:calc(50% / 2);
-    bottom:4rem;
-}
-.icons .icon{
-    margin:0.25rem;
-    cursor: pointer;
-}
-/*首頁設定*/
-#home main{
- padding:5rem;
- text-align: center;
-}
-#home #slide{
-    display:flex;
-    width:80%;
-    height:40vh;
-    overflow:hidden;
-    margin:auto;
-    position:relative;
-}
-#home .card{
-    width:100%;
-    flex-shrink: 0;
-    position:absolute;
-}
-#home .card h3{
-    margin:0.75em 0;
-    font-size:2rem;
-    position:absolute;
-    bottom:5rem;
-    padding:1rem;
-}
-#home .card div{
-    position:absolute;
-    bottom:3rem;
-    font-size:1rem;
-    overflow: hidden;
-    text-align: left;;
-    padding:1rem;
-}
-#home .card img{
-    width:100%;
-    height:360px;
-    border-radius:1.5em;
+main {
+    height: calc(100vh - 7rem);
 }
 
-#home .btns{
-    width:80%;
-    margin:auto;
-    text-align: center;
+footer {
+    background: lightskyblue;
+    color: darkblue;
+    width: 1920px;
+    height: 3rem;
+    position: fixed;
+    bottom: 0;
+}
+
+/*通用css設定*/
+.d-flex {
+    display: flex;
+}
+
+.d-center {
+    display: flex;
     justify-content: center;
     align-items: center;
 }
-#home .btn{
-    border:1px solid #999;
-    border-radius: 10px;
-    width:60px;
-    height:2rem;
-    margin:1rem;
-    line-height:2rem;
-    background:white;
-    cursor: pointer;
-}
-#home .btn:hover{
-    background:#eee;
-}
-#home .event{
-    width:80%;
-    padding:2rem;
-    box-shadow: 0 0 10px #ccc;
-    margin:2rem auto;
+
+.container {
+    width: 75%;
+    margin: auto;
 }
 
-#home .event div{
-    text-align: left;
-    margin:1rem 0;
-}
-/*新聞頁設定*/
-#news #list{
-    width:75%;
-    margin:1rem auto;
-    height:70vh;
-    overflow: auto;
-    padding:1rem;
-}
-
-#news article{
-    width:95%;
-    height:20vh;
-}
-#news article .media{
- width:15vh;
- height:15vh;
- min-width:100px;
- min-height:100px;
- display:inline-block;
- float:left;
- vertical-align: top;
- margin:0.5rem;
-}
-#news article img{
+/*設定只要放在.media樣式中的圖片或影片都是100%寬高，
+這樣只需要各頁面設定外部.media樣式的外觀寬高就可以了*/
+.media img{
     width:100%;
     height:100%;
 }
-#news article h3{
-    padding:0.5rem;
+
+/*頁首導覽列*/
+
+nav.container {
+    justify-content: space-between;
 }
-#news article h3 .btn{
-    padding:0.25rem 1rem;
-    border:1px solid #999;
-    border-radius:1rem;
-    float:right;
-    font-weight:300;
+
+nav a {
+    font-size: 1.2em;
+    margin: 0 0.25em;
+    text-decoration: none;
+    padding: 0.25em 1em;
 }
-#news article h3 .btn:hover{
+
+nav a:hover,
+nav .active {
+    text-decoration: underline;
+    background: #EEE;
+    border-radius: 15px;
+    box-shadow: 0px 2px 5px #999;
+}
+
+/*社群分享圖示設定*/
+.social-icons {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    position: fixed;
+    left: calc(50% / 2);
+    bottom: 4rem;
+}
+
+.social-icons div {
+    margin: 0.25rem;
+    cursor: pointer;
+}
+
+
+/*首頁設定*/
+#home main {
+    padding: 5rem;
+}
+
+#home #slides {
+    display: flex;
+    width: 80%;
+    height: 40vh;
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+    border-radius:2rem;
+}
+
+#home .slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+}
+
+#home .slide .title{
+    margin: 0.75em 0;
+    font-size: 3rem;
+    position: absolute;
+    bottom: 5rem;
+    left:3rem;
+}
+
+#home .slide section {
+    width:80%;
+    position: absolute;
+    left:3rem;
+    bottom: 1.5rem;
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+#home .ctrl-btns {
+    width: 80%;
+    margin: auto;
+}
+
+#home .btn {
+    border-radius: 50%;
+    background-color:orange;
+    width:2rem;
+    height: 2rem;
+    margin: 1rem;
+    cursor: pointer;
+    color:white
+}
+
+#home .btn:hover {
+    background: green;
+}
+
+#home .event {
+    width: 80%;
+    padding: 1rem;
+    box-shadow: 0 0 10px #ccc;
+    margin: 1rem auto; 
+}
+
+#home .event section {
+    text-align: left;
+    margin: 1rem 0;
+    font-size:1.2rem;
+}
+
+/*新聞頁設定*/
+#news #list {
+    width: 95%;
+    margin: 1rem auto;
+    height: 78vh;
+    padding: 1rem;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-between;
+}
+
+#news article {
+    width: 30%;
+    height: 36vh;
+    border: 1px solid #ccc;
+    padding: 0.75rem;
+    display: block;
+    position:relative;
+}
+
+#news article .media {
+    width: 100%;
+    height: 15vh;
+    display: block;
+}
+
+#news article .title {
+    font-size:1.2rem;
+    font-weight:bolder;
+    padding: 0.25rem;
+}
+
+#news article .news-view {
+    padding: 0.25rem 1rem;
+    border: 1px solid #999;
+    border-radius: 1rem;
+    position:absolute;
+    bottom:1rem;
+    right:1rem;
+}
+
+#news article .news-view:hover {
     background-color: lightgreen;
     cursor: pointer;
 }
-#news article section{
-    padding:0.5rem;
-}
 
-#news .info{
-    width:100%;
-    height:25%;
-    position:absolute;
-    bottom:0px;
-    background:rgba(200,200,200,0.7);
-    padding:1em;
-    line-height:1.4em;
-}
-
-/*裝置頁設定*/
-#devices main{
-    justify-content: center;
-    position:relative;
-    align-items: center;
-}
-
-#devices .left,
-#devices .right{
-width:48%;
-height:70vh;
-margin:1%;
-padding:1rem;
-border:1px solid #ccc;
-box-shadow: 1px 1px 10px #ccc;
-
-}
-
-#devices .left img{
-    width:100%;
-    height:100px;
-}
-
-/*登入頁設定*/
-
-#login .login-box{
-    padding:2rem;
-    border-radius: 2em;
+#news article section {
+    padding: 0.5rem;
+    height: 6rem;
     overflow: hidden;
+}
+
+/*探索頁設定*/
+#discover .info-block{
+    width: 48%;
+    height: 65vh;
+    margin: 1%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 10px #ccc;
+}
+
+#discover .media {
+    width: 100%;
+    height: 15rem;
+}
+
+#discover .title{
+    font-size:1.5rem;
+    font-weight: bold;
+    line-height: 3rem;
+}
+#discover section{
+    font-size:1.2rem;
+    line-height:1.8rem;
+}
+
+/*購票頁設定*/
+#tickets .tickets-box {
+    padding: 2rem;
+    border-radius: 2em;
     box-shadow: 0 0 15px #ccc;
-    max-width:60%;
-    min-width:40rem;
-    margin:3rem auto;
+    width:60rem;
+    margin: 3rem auto;
 }
 
-#login .form{
-    width:100%;
-    padding:2rem;
-}
-#login label{
-    display:block;
-    margin:1rem;
-    font-size:1.25rem;
-}
-#login label div{
-    padding:0.25rem;
-}
-#login label input{
-    width:100%;
-    font-size:1.2em;
-    border-radius:0.5em;
-    padding:0.75rem;
+#tickets .form {
+    width: 100%;
+    padding: 2rem;
 }
 
-#login input[type='submit']{
-    display:block;
-    padding:0.5rem 1rem;
-    width:50%;
-    margin:1rem auto;
-    font-size:1.25rem;
-    border-radius:0.5em;
+#tickets label {
+    display: block;
+    margin: 1rem;
+    font-size: 1.25rem;
+}
+
+#tickets label div {
+    padding: 0.25rem;
+}
+
+#tickets label input {
+    width: 100%;
+    font-size: 1.2em;
+    border-radius: 0.5em;
+    padding: 0.75rem;
+}
+
+#tickets input[type='submit'] {
+    display: block;
+    padding: 0.5rem 1rem;
+    width: 80%;
+    margin: 1rem auto;
+    font-size: 1.25rem;
+    border-radius: 0.5em;
 }

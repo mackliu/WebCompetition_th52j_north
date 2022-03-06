@@ -5,146 +5,208 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME | Taiwan Mobile game</title>
+    <title>HOME | Floriade Expo 2022</title>
     <link rel="stylesheet" href="style.css">
     <script src="jquery-3.6.0.min.js"></script>
 </head>
 
 <body id="home">
     <!--網站上方頁首部份-->
-    <header>
+    <header class="d-center">
         <!--導覽列容器-->
         <nav class="container d-flex">
             <!--把標籤放在導覽列的左側，可以使用<img>連結圖片來代替-->
             <h1>LOGO</h1>
             <!--建立一個標籤容器來放置選項，會在導覽列的右側-->
-            <div>
+            <div class="d-center">
                 <!--建立四個頁面的連結及文字內容，加上樣式 active 來對當前頁做強調-->
                 <a href="home.html" class='active'>Home</a>
                 <a href="news.html">News</a>
-                <a href="devices.html">Devices</a>
+                <a href="discover.html">Discover</a>
                 <a href="tickets.html">Tickets</a>
             </div>
         </nav>
     </header>
     <!--網站中間主內容部份-->
     <main>
-
-        <style>
-            .card {
-                font-size: 3rem;
-                display: none;
-            }
-        </style>
         <!--使用樣式card 對每一個區塊做外觀的規範-->
-        <div id="slide">
-            <div class="card">
-                <img src="img/game.png" alt="">
-                <h3>The S1 racing game</h3>
-                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo provident iure a iste nobis cupiditate temporibus rerum! Repellat assumenda repellendus aut quod atque nostrum reprehenderit sint architecto praesentium sunt. Sequi!</div>
-            
+        <div id="slides">
+            <div class="slide">
+                <div class="media">
+                    <img src="img/game.png" alt="">
+                </div>
+                <div class="title">The S1 racing game</div>
+                <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo provident iure a iste nobis
+                    cupiditate temporibus rerum! Repellat assumenda repellendus aut quod atque nostrum reprehenderit
+                    sint architecto praesentium sunt. Sequi!</section>
+
             </div>
-            <div class="card">
-                <img src="img/game.png" alt="">
-                <h3>The S2 racing game</h3>
-                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo provident iure a iste nobis cupiditate temporibus rerum! Repellat assumenda repellendus aut quod atque nostrum reprehenderit sint architecto praesentium sunt. Sequi!</div>
-            
+            <div class="slide">
+                <div class="media">
+                    <img src="img/game.png" alt="">
+                </div>
+                <div class="title">The S2 racing game</div>
+                <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo provident iure a iste nobis
+                    cupiditate temporibus rerum! Repellat assumenda repellendus aut quod atque nostrum reprehenderit
+                    sint architecto praesentium sunt. Sequi!</section>
+
             </div>
-            <div class="card">
-                <img src="img/game.png" alt="">
-                <h3>The S3 racing game</h3>
-                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo provident iure a iste nobis cupiditate temporibus rerum! Repellat assumenda repellendus aut quod atque nostrum reprehenderit sint architecto praesentium sunt. Sequi!</div>
-            
+            <div class="slide">
+                <div class="media">
+                    <img src="img/game.png" alt="">
+                </div>
+                <div class="title">The S3 racing game</div>
+                <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo provident iure a iste nobis
+                    cupiditate temporibus rerum! Repellat assumenda repellendus aut quod atque nostrum reprehenderit
+                    sint architecto praesentium sunt. Sequi!</section>
+
             </div>
-            <div class="card">
-                <img src="img/game.png" alt="">
-                <h3>The S4 racing game</h3>
-                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo provident iure a iste nobis cupiditate temporibus rerum! Repellat assumenda repellendus aut quod atque nostrum reprehenderit sint architecto praesentium sunt. Sequi!</div>
-            
+            <div class="slide">
+                <div class="media">
+                    <img src="img/game.png" alt="">
+                </div>
+                <div class="title">The S4 racing game</div>
+                <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo provident iure a iste nobis
+                    cupiditate temporibus rerum! Repellat assumenda repellendus aut quod atque nostrum reprehenderit
+                    sint architecto praesentium sunt. Sequi!</section>
+
             </div>
-            <div class="card">
-                <img src="img/game.png" alt="">
-                <h3>The S5 racing game</h3>
-                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo provident iure a iste nobis cupiditate temporibus rerum! Repellat assumenda repellendus aut quod atque nostrum reprehenderit sint architecto praesentium sunt. Sequi!</div>
-            
+            <div class="slide">
+                <div class="media">
+                    <img src="img/game.png" alt="">
+                </div>
+                <div class="title">The S5 racing game</div>
+                <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo provident iure a iste nobis
+                    cupiditate temporibus rerum! Repellat assumenda repellendus aut quod atque nostrum reprehenderit
+                    sint architecto praesentium sunt. Sequi!</section>
+
             </div>
         </div>
-        <div class="btns d-flex">
-            <div class="btn" id="goleft"> <= </div>
-                    <div class="btn" id="goright"> => </div>
+        <div class="ctrl-btns d-center">
+            <div class="btn d-center" id="left">
+                <= </div>
+                    <div class="btn d-center" id="right"> => </div>
             </div>
             <div class="event">
-                <h3>活動資訊</h3>
-                <div>
+                <section>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, repellendus sunt eligendi quasi ut,
+                    accusamus ab aut error reiciendis neque a, voluptate sequi ea consequatur maiores. Odit quis placeat
+                    rem.<br>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, repellendus sunt eligendi quasi ut,
                     accusamus ab aut error reiciendis neque a, voluptate sequi ea consequatur maiores. Odit quis placeat
                     rem.
-                </div>
+                </section>
             </div>
     </main>
-    <!--使用樣式icons來規範中間社群小icon的外觀規範和內部元件的位置及排列-->
-    <div class="icons">
+
+    <!--使用樣式social-icons來規範中間社群圖示的外觀規範和內部元件的位置及排列-->
+    <div class="social-icons">
         <!--針對每個小icon 使用樣式icon來規範圖片的大小-->
-        <div class="icon"><img src="img/Facebook.png"></div>
-        <div class="icon"><img src="img/Google.png"></div>
-        <div class="icon"><img src="img/Twitter.png"></div>
-        <div class="icon"><img src="img/YouTube.png"></div>
+        <div><img src="img/Facebook.png"></div>
+        <div><img src="img/Google.png"></div>
+        <div><img src="img/Twitter.png"></div>
+        <div><img src="img/YouTube.png"></div>
     </div>
     <!--網站下方頁腳部份-->
-    <footer>Copyright 2022 Floriade All Rights Reserved</footer>
+    <footer class="d-center">Copyright 2022 Floriade All Rights Reserved</footer>
 </body>
 
 </html>
 
 <script>
-    let i = 0;
-    let num = $(".card").length
+    //計算目前檔案中有多少個項目要輪播
+    let num = $(".slide").length
 
-    $(".card").eq(0).show()
-    let w = $(".card").outerWidth();
+    //先讓第一個(索引值為0)項目顯示出來
+    $(".slide").eq(0).show()
 
+    //計算每個輪播項目的寬度
+    let w = $(".slide").width();
+
+    //建立自動輪播器，每兩秒輪播一次
     let slide = setInterval(function () {
         slider('left')
     }, 2000)
 
+    //建立一個輪播函式，每次呼叫這個函式就會執行輪播一次，
+    //函式中會帶入一個參數，這個參數用來決定要那個方向輪播
     function slider(director) {
-        let now = $(".card:visible").index();
+
+        //取得目前畫面上可見的輪播項目索引值
+        let now = $(".slide:visible").index();
+
+        //宣告一個變數用來代表下一個輪播項目的索引值
         let next;
-        if (director == 'left') {
-            next = (now + 1 < num) ? now + 1 : 0;
-            $(".card").eq(next).css({ left: w });
-            $(".card").eq(next).show();
 
-            $(".card").eq(now).animate({ right: w }, function () {
-                $(".card").eq(now).hide()
-                $(".card").eq(now).css({ right: '', left: '' })
-            })
-        } else {
-            next = (now - 1 >= 0) ? now - 1 : num - 1;
-            $(".card").eq(next).css({ right: w });
-            $(".card").eq(next).show();
+        ///宣告一個動畫設定值，以物件的方式宣告
+        let animation = {};
 
-            $(".card").eq(now).animate({ left: w }, function () {
-                $(".card").eq(now).hide()
-                $(".card").eq(now).css({ left: '', right: '' })
-            })
+        //宣告一個清空位置設定的變數，用來在每次輪播結束後清除定位的設定
+        let clear = { left: '', right: '' }
+
+        //使用帶入的方向參數值來設定相關的變數內容
+        switch (director) {
+            case 'left':
+                //當前的索引值+1如果超過最大的索引值，
+                //則把索引值設為0，表示從第一個項目輪播
+                next = (now + 1 < num) ? now + 1 : 0;
+
+                //如果方向設定為向左移動，
+                //則動畫的設定為向右遠離一個輪播寬度的距離w
+                animation = { right: w }
+                break;
+            case 'right':
+                //當前的索引值-1如果小於0，
+                //則把索引值設為最大的索引值，表示從最後一個項目輪播
+                next = (now - 1 >= 0) ? now - 1 : num - 1;
+
+                //如果方向設定為向右移動，
+                //則動畫的設定為向左遠離一個輪播寬度的距離w
+                animation = { left: w }
+                break;
         }
 
-        $(".card").eq(next).animate({ left: 0 }, () => {
-            $(".card").eq(next).css({ left: '', right: '' })
+        //在輪播前先把下一個輪播項目移動到對應的位置(左或右)
+        $(".slide").eq(next).css(director, w);
+        $(".slide").eq(next).show();
+
+        //先讓下一個項目先進行移動，
+        //目標都是要移動到輪播區的最左邊的位置
+        $(".slide").eq(next).animate({ left: 0 })
+
+        //同時開始當前項目的移動
+        //目標是根據設定離開輪播區
+        $(".slide").eq(now).animate(animation, function () {
+
+            //移動結束後把當前項目設為隱藏
+            $(".slide").eq(now).hide()
+
+            //最後將當前項目和下一個輪播項目的左右定位資訊清空
+            $(".slide").eq(now).css(clear)
+            $(".slide").eq(next).css(clear)
         })
     }
 
+    //針對畫面上的向右向左按鈕設定點擊事件
     $(".btn").on("click", function () {
-        let id = $(this).attr("id").replace("go","");
-        slider(id)
+
+        //取得設定在按鈕上的id，其中id值代替不同方向的字串(left or right)
+        let director = $(this).attr("id");
+
+        //根據取得的方向進行輪播
+        slider(director)
     })
 
-    $(".btn").hover(
+    //針對輪播按鈕區設定hover事件
+    $(".ctrl-btns").hover(
         function () {
+            //第一個函式代表滑鼠滑入按鈕區
+            //此時先清除輪播器，讓自動輪播停下來
             clearInterval(slide)
         },
         function () {
+            //第一個函式代表滑鼠滑出按鈕區
+            //此時重建輪播器，讓自動輪播繼續輪播
             slide = setInterval(function () {
                 slider('left')
             }, 2000)

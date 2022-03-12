@@ -15,8 +15,8 @@ body {
 }
 
 header {
-    background-color: lightskyblue;
-    box-shadow: 0 0 5px #999;
+    background-color: green;
+    box-shadow: 0 0 5px green;
     height: 4rem;
 }
 
@@ -25,8 +25,8 @@ main {
 }
 
 footer {
-    background: lightskyblue;
-    color: darkblue;
+    background: green;
+    color: white;
     width: 1920px;
     height: 3rem;
     position: fixed;
@@ -46,14 +46,18 @@ footer {
 
 .container {
     width: 75%;
-    margin:1rem auto;
+    margin: 1rem auto;
+}
+
+.t-bg {
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 /*設定只要放在.media樣式中的圖片或影片都是100%寬高，
 這樣只需要各頁面設定外部.media樣式的外觀寬高就可以了*/
-.media img{
-    width:100%;
-    height:100%;
+.media img {
+    width: 100%;
+    height: 100%;
 }
 
 /*頁首導覽列*/
@@ -69,12 +73,25 @@ nav a {
     padding: 0.25em 1em;
 }
 
+nav a:link,
+nav a:visited {
+    color: white
+}
+
+
 nav a:hover,
 nav .active {
     text-decoration: underline;
     background: #EEE;
     border-radius: 15px;
     box-shadow: 0px 2px 5px #999;
+    color: green;
+}
+
+
+a.active:link,
+a.active:visited {
+    color: green;
 }
 
 /*社群分享圖示設定*/
@@ -105,7 +122,7 @@ nav .active {
     overflow: hidden;
     margin: auto;
     position: relative;
-    border-radius:2rem;
+    border-radius: 2rem;
 }
 
 #home .slide {
@@ -115,25 +132,25 @@ nav .active {
     display: none;
 }
 
-#home .slide .title{
+#home .slide .title {
     margin: 0.75em 0;
-    font-size: 3rem;
+    font-size: 4rem;
     position: absolute;
-    bottom: 5rem;
-    left:3rem;
-    color:white;
+    bottom: 6rem;
+    left: 4rem;
+    color: white;
     text-shadow: 1px 1px 10px lightseagreen;
 }
 
 #home .slide section {
-    width:80%;
+    width: 80%;
     position: absolute;
-    left:3rem;
-    bottom: 1.5rem;
-    font-size: 1.5rem;
+    left: 4.5rem;
+    bottom: 2rem;
+    font-size: 1.8rem;
     text-align: left;
-    color:lightgreen;
-    text-shadow: 1px 1px 5px green;
+    color: white;
+    text-shadow: 1px 1px 5px lightseagreen;
 }
 
 #home .ctrl-btns {
@@ -143,12 +160,12 @@ nav .active {
 
 #home .btn {
     border-radius: 50%;
-    background-color:orange;
-    width:2rem;
+    background-color: orange;
+    width: 2rem;
     height: 2rem;
     margin: 1rem;
     cursor: pointer;
-    color:white
+    color: white
 }
 
 #home .btn:hover {
@@ -157,16 +174,16 @@ nav .active {
 
 #home .event {
     width: 80%;
-    padding: 1rem;
-    box-shadow: 0 0 10px #ccc;
-    margin: 1rem auto; 
+    padding: 2rem;
+    margin: 1rem auto;
+    background-color: rgba(220, 255, 220, 0.7);
+    border-radius: 2rem;
 }
 
 #home .event section {
     text-align: left;
     margin: 1rem 0;
-    font-size:1.2rem;
-    background:rgba(0,200,0,0.4);
+    font-size: 1.2rem;
 }
 
 /*新聞頁設定*/
@@ -186,7 +203,14 @@ nav .active {
     border: 1px solid #ccc;
     padding: 0.75rem;
     display: block;
-    position:relative;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+#news article:hover {
+    border: 2px solid green;
+    transform: scale(1.05);
+    transition: all 0.5s ease;
 }
 
 #news article .media {
@@ -196,8 +220,8 @@ nav .active {
 }
 
 #news article .title {
-    font-size:1.2rem;
-    font-weight:bolder;
+    font-size: 1.2rem;
+    font-weight: bolder;
     padding: 0.25rem;
 }
 
@@ -205,9 +229,9 @@ nav .active {
     padding: 0.25rem 1rem;
     border: 1px solid #999;
     border-radius: 1rem;
-    position:absolute;
-    bottom:1rem;
-    right:1rem;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
 }
 
 #news article .news-view:hover {
@@ -222,29 +246,25 @@ nav .active {
 }
 
 /*探索頁設定*/
-#discover .info-block{
+#discover .info-block {
     width: 96%;
-    height: 40vh;
+    height: 30vh;
     margin: 0 auto;
     padding: 1rem;
-    background-color: white;
-   /*  border: 1px solid #ccc; */
-   /*  box-shadow: 1px 1px 10px #ccc; */
+
 }
 
-#discover .media {
-    width: 35%;
-    height:40%;
-}
-
-#discover .title{
-    font-size:1.5rem;
+#discover .title {
+    font-size: 1.5rem;
     font-weight: bold;
     line-height: 3rem;
+    padding: 0.5rem 1.5rem;
 }
-#discover section{
-    font-size:1.2rem;
-    line-height:1.8rem;
+
+#discover section {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    padding: 0.5rem 1.5rem;
 }
 
 /*購票頁設定*/
@@ -252,7 +272,7 @@ nav .active {
     padding: 2rem;
     border-radius: 2em;
     box-shadow: 0 0 15px #ccc;
-    width:60rem;
+    width: 60rem;
     margin: 3rem auto;
 }
 

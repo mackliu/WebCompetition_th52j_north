@@ -10,6 +10,8 @@ body {
     width: 1920px;
     height: 1080px;
     margin: auto;
+    background-image: url(./img/bg.jpg);
+    background-size: cover;
 }
 
 header {
@@ -44,7 +46,7 @@ footer {
 
 .container {
     width: 75%;
-    margin: auto;
+    margin:1rem auto;
 }
 
 /*設定只要放在.media樣式中的圖片或影片都是100%寬高，
@@ -119,6 +121,8 @@ nav .active {
     position: absolute;
     bottom: 5rem;
     left:3rem;
+    color:white;
+    text-shadow: 1px 1px 10px lightseagreen;
 }
 
 #home .slide section {
@@ -128,6 +132,8 @@ nav .active {
     bottom: 1.5rem;
     font-size: 1.5rem;
     text-align: left;
+    color:lightgreen;
+    text-shadow: 1px 1px 5px green;
 }
 
 #home .ctrl-btns {
@@ -160,6 +166,7 @@ nav .active {
     text-align: left;
     margin: 1rem 0;
     font-size:1.2rem;
+    background:rgba(0,200,0,0.4);
 }
 
 /*新聞頁設定*/
@@ -216,17 +223,18 @@ nav .active {
 
 /*探索頁設定*/
 #discover .info-block{
-    width: 48%;
-    height: 65vh;
-    margin: 1%;
+    width: 96%;
+    height: 40vh;
+    margin: 0 auto;
     padding: 1rem;
-    border: 1px solid #ccc;
-    box-shadow: 1px 1px 10px #ccc;
+    background-color: white;
+   /*  border: 1px solid #ccc; */
+   /*  box-shadow: 1px 1px 10px #ccc; */
 }
 
 #discover .media {
-    width: 100%;
-    height: 15rem;
+    width: 35%;
+    height:40%;
 }
 
 #discover .title{
